@@ -30,7 +30,7 @@ public Plugin myinfo =
 	name = "Knife Alert",
 	author = "Nek.'a 2x2 | ggwp.site ",
 	description = "Оповещение от убийства с ножа",
-	version = "1.0.0",
+	version = "1.0.1",
 	url = "https://ggwp.site/"
 };
 
@@ -247,7 +247,7 @@ public int ValMenu(Menu hMenuLocal, MenuAction action, int client, int iItem)
 
 void SetVolume(int client, float volume)
 {
-	data[client].volume = 0.0;
+	data[client].volume = volume;
 	PrintToChat(client, "Вы выбрали громкость в [%.1f%]", volume);
 	char sBuffer[4];
 	Format(sBuffer, sizeof(sBuffer), "%.1f", volume);
